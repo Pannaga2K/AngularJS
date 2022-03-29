@@ -1,0 +1,43 @@
+<!doctype html>
+<html ng-app="e11">
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+        <script src="app.js"></script>
+    </head>
+    <body>
+        <h1>FILTERS</h1>
+        <div ng-controller="filter1">
+            <h1>uppercase FILTER:</h1>
+            <p>The name is {{ lastName | uppercase }}</p>
+            <h1>lowercase FILTER:</h1>
+            <p>The name is {{ lastName | lowercase }}</p>
+            <h1>orderBy FILTER:</h1>
+            <ul>
+                <li ng-repeat="x in swords | orderBy:'name'">
+                    {{ x.name }}
+                </li>
+            </ul>
+            <h1>currency FILTER:</h1>
+            <p>Price: {{ price | currency }}</p>
+            <h1>filter FILTER:</h1>
+            <ul>
+                <li ng-repeat="x in swords | filter : 'u'">
+                    {{ x.name }}
+                </li>
+            </ul>
+            <h1>FROM input FILTER:</h1>
+            <p><input type="text" ng-model="test"></p>
+            <ul>
+                <li ng-repeat="x in swords | filter:test">
+                    {{ x.name }}
+                </li>
+            </ul>
+            <h1>CUSTOM FILTER:</h1>
+            <ul ng-controller="filter1">
+                <li ng-repeat="x in swords">
+                    {{x.name | customFilter}}
+                </li>
+            </ul>
+        </div>
+  </body>
+</html>

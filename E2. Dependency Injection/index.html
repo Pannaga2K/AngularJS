@@ -1,0 +1,25 @@
+<!doctype html>
+<html ng-app="e2">
+	<head>
+			<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+			<script src="app.js" ></script>
+	</head>
+	<body>
+        <div>
+            <h1>DEPENDENCY INJECTION</h1>
+            <div ng-controller="e2_controller" >
+                <input type="text" ng-model="name" ng-blur="upper()" />
+            </div>
+            <div ng-controller="e2_controller" >
+                <h1>FILTER</h1>
+                <p>{{ cost | currency : "₹" : 4 }}</p>
+                <h1>CUSTOM FILTER</h1>
+                <p>ORIGINAL: {{ sayMessage() }}</p>
+                <p>LOVE: {{ sayLoveMessage() }}</p>
+                <p>TRUTH: {{ sayLoveMessage() | truth : "SWORDS" : "ENMA" }}</p>
+                <p>LOWER CASE TRUTH: {{ sayLoveMessage() | truth : "SWORDS" : "ENMA" | lowercase }}</p>
+            </div>
+            
+        </div>
+	</body>
+</html>

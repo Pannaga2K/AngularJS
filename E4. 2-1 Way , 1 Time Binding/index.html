@@ -1,0 +1,20 @@
+<!doctype html>
+<html ng-app="e4">
+	<head>
+			<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+			<script src="app.js" ></script>
+	</head>
+	<body>
+        <h1>2 WAY, 1 WAY AND 1 TIME BINDING</h1>
+        <div ng-controller="BindingController" >
+            <button  ng-click="showNumberOfWatchers()">LOG NUMBER OF WATCHERS</button>
+            <button  ng-click="setFullName()">SET FULL NAME</button>
+            <p>FULL NAME : {{ :: fullName }}</p>
+            <button  ng-click="logFirstName()">LOG FIRST NAME</button></br>
+            <button  ng-click="logFullName()">LOG FULL NAME</button></br>
+            <div>
+                <input type="text" ng-model="firstName" />
+            </div>
+        </div>
+	</body>
+</html>

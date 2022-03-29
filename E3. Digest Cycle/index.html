@@ -1,0 +1,22 @@
+<!doctype html>
+<html ng-app="e3">
+	<head>
+			<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+			<script src="app.js" ></script>
+	</head>
+	<body>
+        <h1>DIGEST CYCLE</h1>
+        <div ng-controller="counterController" >
+            <button ng-click="showNumberOfWatchers()" >LOG # OF WATCHERS</button>
+            <input type="text" ng-model="name" />
+            <div>
+                <button ng-click="countOnce()" >UP ONCE COUNTER</button>
+                <button ng-click="upCounter()" >INCREMENT COUNTER</button>
+            </div>
+            <div>
+                <p>ONCE COUNTER: {{onceCounter}}</p>
+                <p>REGULAR COUNTER: {{counter}}</p>
+            </div>
+        </div>
+	</body>
+</html>

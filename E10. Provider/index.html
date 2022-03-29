@@ -1,0 +1,29 @@
+<!doctype html>
+<html ng-app="e10">
+	<head>
+			<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+			<script src="app.js" ></script>
+	</head>
+	<body>
+        <h1>PROVIDER</h1>
+        <div id="list" ng-controller="ShoppingListController as list" >
+            <h3>SHOPPING LIST</h3>
+            <input type="text" ng-model="list.itemName" placeholder="ITEM NAME" />
+            <input type="text" ng-model="list.itemQuantity" placeholder="ITEM QUANTITY" />
+            <button ng-click="list.addItem()" >ADD</button>
+            <ul>
+                <li ng-repeat="item in list.items" >
+                    {{ item.quantity }} of {{ item.name }}
+                    <button ng-click="list.removeItem($index)" >REMOVE</button>
+                </li>
+            </ul>
+            <!-- <div class="error" >ERROR: {{ list.errorMessage }}</div> -->
+            <!-- ng-if -->
+            <div class="error" ng-if="list.errorMessage" >ERROR: {{ list.errorMessage }} </div>
+            <!-- ng-show -->
+            <div class="error" ng-show="list.errorMessage" >ERROR: {{ list.errorMessage }}</div>
+            <!-- ng-hide -->
+            <div class="error" ng-hide="!list.errorMessage" >ERROR: {{ list.errorMessage }}</div>
+        </div>
+	</body>
+</html>

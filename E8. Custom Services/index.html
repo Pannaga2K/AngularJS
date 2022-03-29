@@ -1,0 +1,24 @@
+<!doctype html>
+<html ng-app="e8">
+	<head>
+			<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+			<script src="app.js" ></script>
+			<!-- <script src="prototype.js" ></script> -->
+	</head>
+	<body>
+        <h1>CUSTOM SERVICES</h1>
+        <div ng-controller="ShoppingListAddController as addingItem" >
+            <input type="text" ng-model="addingItem.itemName" placeholder="ITEM NAME" />
+            <input type="text" ng-model="addingItem.itemQuantity" placeholder="ITEM QUANTITY" />
+            <button ng-click="addingItem.addItem()" >ADD</button>
+        </div>
+        <div ng-controller="ShoppingListShowController as showList" >
+            <ol>
+                <li ng-repeat="item in showList.items" >
+                    {{ item.quantity }} of {{ item.name }}
+                    <button ng-click="showList.removeItem(item)" >REMOVE</button>
+                </li>
+            </ol>
+        </div>
+	</body>
+</html>

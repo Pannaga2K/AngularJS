@@ -1,0 +1,52 @@
+- browser-sync
+    - npm i -g browser-sync
+    - browser-sync start --server --directory --files "**/*"
+        - STARTS localhost SERVER AT PORT 3000
+
+===============================================================
+
+$scope
+$filter
+    - UPPERCASE
+        - JS
+            - $filter("uppercase")(<VALUE>);
+        - HTML
+            - {{ <EXPRESSION/VALUE> | uppercase }}
+    - CURRENCY
+        - JS
+            - $filter("currency")(amount, symbol, fractionSize);
+        - HTML
+            - {{ <EXPRESSION/VALUE> | currency : symbol : fractionSize }}
+$injector
+    - $injector.annotate(<FUNCTION_NAME>);
+        - RETURNS THE PARAMETERS ATTACHED TO THE FUNCTION IN ARRAY FORMAT
+$watch
+    - $scope.$watch(<VARIABLE>, function(<NEW_VALUE, OLD_VALUE>) {})
+$digest
+    - ALERTS WATCHERS/CHECKS EACH WATCHERS
+$apply
+    - EXECUTES CODE AND CALLS $digest() AT THE END
+    - USED FOR EXCEPTION HANDLINGS
+$timeout
+    - SIMILAR TO setTimeout();
+    - USES $apply() BY DEFAULT
+
+===============================================================
+
+IIFE
+    - IMMEDIATELY-INVOKED FUNCTION EXPRESSION
+    - EXECUTE FUNCTIONS AS SOON AS THEY CREATED
+
+DIGEST CYCLE
+    - YES
+        - IF THERE IS ANY CHANGE
+    - NO
+        - IF THERE IS NO CHANGE
+        - RUNS FOR EVERY ENTITY ONCE WHEN TRIGGERED
+
+PROTOTYPAL INHERITANCE
+
+CONTROLLER AS SYNTAX
+
+CUSTOM SERVICES
+    - 
